@@ -25,14 +25,14 @@ class BlogsController < ApplicationController
   end
 
   def edit
-    render :post
+    
   end
 
   def update
     if @blog.update(blog_params)
       redirect_to blogs_path, notice: 'ブログを編集しました！'
-    else
-      render :edit
+    #else
+     # render :edit
     end
   end
   def show
